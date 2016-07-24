@@ -10,7 +10,7 @@ compinit
 
 autoload -U promptinit
 promptinit
-PROMPT='%n@%M:%~%(!.#.$%  '
+PROMPT='%n@%M:%~%(!.# .$%  '
 #'[%n@%M%~ %(!.#.$%]  '
 #PS1='[\u@\h \W]\$ '
 

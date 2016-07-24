@@ -161,4 +161,5 @@ bar {
 }
 
 exec firefox
+exec urxvt -cd ~ -e tmux attach
 exec steam
