@@ -121,11 +121,11 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # take screenshot (full screen)
-bindsym Print exec scrot '/data/%H-%M-%d-%m-%Y.png'
+bindsym Print exec "scrot -e 'cp $f /data/screenshots/latest.png' /data/screenshots/%Y-%m-%d_%T.png"
 # take screenshot using mouse selection
-bindsym --release $mod+Print exec scrot -s '/data/%H-%M-%d-%m-%Y.png'
+bindsym --release $mod+Print exec "scrot -e 'cp $f /data/screenshots/latest.png' -s /data/screenshots/%Y-%m-%d_%T.png"
 # start i3lock
-bindsym $mod+x exec i3lock
+bindsym $mod+x exec i3lock -c 000000
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -160,6 +160,8 @@ bar {
         tray_output primary
 }
 
+exec urxvt -e sudo ~/scripts/performance.sh; exit
 exec firefox
 exec urxvt -cd ~ -e tmux attach
 exec steam
+exec xautolock -time 15 -locker "i3lock -c 000000" &

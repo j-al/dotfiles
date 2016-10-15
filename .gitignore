@@ -1,1 +1,4 @@
 *.swp
+scripts/scripts/autotelnet.sh
+scripts/scripts/dl.sh
+scripts/scripts/mc.sh
