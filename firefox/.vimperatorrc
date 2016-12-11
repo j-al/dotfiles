@@ -1,0 +1,11 @@
+highlight CmdLine background: black; color: white; transition: all 0.25s;
+highlight CompTitle font-weight: bold; background: black;
+highlight CompTitle>* color: gray;
+highlight InfoMsg color: magenta; background: black;
+highlight Normal color: gray; background: black;
+highlight Title color: magenta; background: black; font-weight: bold;
+highlight WarningMsg color: red; background: black;
+set "editor=urxvt -e vim -f"
+source! /home/jl/.vimperatorrc.local
+
+" vim: set ft=vimperator:

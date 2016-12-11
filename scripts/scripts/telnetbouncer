@@ -1,0 +1,10 @@
+#!/bin/sh
+pkill tail
+port=20215
+date=`date +%d-%m-%Y`
+dir=/data/tflogs/telnet/telnet-$date
+echo '# '`date` >> $dir
+tail -F $dir &
+telnet play.totalfreedom.me $port >> $dir
+sleep 60 # 30 was sometimes reconnecting me before telnet had fully loaded. 60 is a good balance between capturing everything and not being disconnected.
+~/scripts/telnetbouncer

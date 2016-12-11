@@ -40,6 +40,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 
 # change focus
+# ** Might change to hjkl **
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
@@ -126,6 +127,10 @@ bindsym Print exec "scrot -e 'cp $f /data/screenshots/latest.png' /data/screensh
 bindsym --release $mod+Print exec "scrot -e 'cp $f /data/screenshots/latest.png' -s /data/screenshots/%Y-%m-%d_%T.png"
 # start i3lock
 bindsym $mod+x exec i3lock -c 000000
+# cmus playback control
+# (add a few more, maybe change the binding)
+bindsym $mod+minus exec cmus-remote -v -10%
+bindsym $mod+equal exec cmus-remote -v +10%
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -160,7 +165,7 @@ bar {
         tray_output primary
 }
 
-exec urxvt -e sudo ~/scripts/performance.sh; exit
+exec urxvt -e sudo ~/scripts/performance; exit
 exec firefox
 exec urxvt -cd ~ -e tmux attach
 exec steam

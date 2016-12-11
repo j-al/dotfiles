@@ -18,3 +18,6 @@ alias ls='ls --color=auto'
 
 export VISUAL=vim
 export EDITOR=vim
+
+#export FG_AIRCRAFT=/home/jl/Aircraft
+export FG_AIRCRAFT=/home/jl/Aircraft/flightgear-fgaddon
