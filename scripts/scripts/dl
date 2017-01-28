@@ -3,14 +3,3 @@ user=rtorrent
 path="163.172.38.59:55422//data/torrents/$1/"
 cd "/data/music"
 wget -r -nH --cut-dirs=3 --ask-password "ftp://$user@$path"
-#path="rtorrent@163.172.38.59:/data/torrents/$2"
-#port="22455"
-#if [ $1 = -wcd ]
-#then
-#    scp -r -P $port $path "/data/music/"
-#elif [ $1 = -ab ]
-#then
-#    scp -r -P $port $path "/data/anime/$2"
-#else
-#    echo "[-ab | -wcd]"
-#fi
