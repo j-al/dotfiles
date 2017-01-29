@@ -15,18 +15,18 @@ set $mod Mod4
 # Workspace names
 set $ws1 1: web
 set $ws2 2: term
-set $ws3 3: misc
-set $ws4 4: misc
+set $ws3 3
+set $ws4 4
 set $ws5 5: steam
-set $ws6 6:
-set $ws7 7:
-set $ws8 8:
-set $ws9 9: niner
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
 set $ws10 10: game
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -134,15 +134,11 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # take screenshot (full screen)
-bindsym Print exec "scrot -e 'cp $f /data/screenshots/latest.png' /data/screenshots/%Y-%m-%d_%T.png"
+#bindsym Print exec "scrot -e 'cp $f /data/screenshots/latest.png' /data/screenshots/%Y-%m-%d_%T.png"
 # take screenshot using mouse selection
-bindsym --release $mod+Print exec "scrot -e 'cp $f /data/screenshots/latest.png' -s /data/screenshots/%Y-%m-%d_%T.png"
+#bindsym --release $mod+Print exec "scrot -e 'cp $f /data/screenshots/latest.png' -s /data/screenshots/%Y-%m-%d_%T.png"
 # start i3lock
 bindsym $mod+x exec i3lock -c 000000
-# cmus playback control
-# (add a few more, maybe change the binding)
-bindsym $mod+minus exec cmus-remote -v -10%
-bindsym $mod+equal exec cmus-remote -v +10%
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -182,8 +178,7 @@ assign [class="Firefox"] $ws1
 assign [class="URxvt" title="tmux"] $ws2
 assign [class="Steam"] $ws5
 
-exec urxvt -e 'sudo ~/scripts/performance; exit'
 exec firefox
 exec --no-startup-id urxvt -cd ~ -e tmux attach
-exec steam
-exec xautolock -time 15 -locker "i3lock -c 000000" &
+#exec steam
+exec xautolock -time 3 -locker "i3lock -c 000000" &

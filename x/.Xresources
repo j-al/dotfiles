@@ -18,7 +18,7 @@ URxvt*foreground: white
 !URxvt*color10: green
 !URxvt*color11: yellow
 !URxvt*color12: blue
-!URxvt*color13: magenta
+!URxvt*color14: magenta
 !URxvt*color14: cyan
 !URxvt*color15: white
 
@@ -29,10 +29,10 @@ URxvt*foreground: white
 *italicFont: Fantasque Sans Mono Italic
 *boldItalicFont: Fantasque Sans Mono Bold Italic
 
-URxvt*font: xft:Fantasque Sans Mono:size=13:style=Regular
-URxvt*faceName: xft:Fantasque Sans Mono:size=13
-URxvt*boldFont: xft:Fantasque Sans Mono:size=13:style=Bold
-URxvt*italicFont: xft:Fantasque Sans Mono:size=13:style=Italic
-URxvt*boldItalicFont: xft:Fantasque Sans Mono:size=13:style=Bold Italic
+URxvt*font: xft:Fantasque Sans Mono:size=14:style=Regular
+URxvt*faceName: xft:Fantasque Sans Mono:size=14
+URxvt*boldFont: xft:Fantasque Sans Mono:size=14:style=Bold
+URxvt*italicFont: xft:Fantasque Sans Mono:size=14:style=Italic
+URxvt*boldItalicFont: xft:Fantasque Sans Mono:size=14:style=Bold Italic
 !
 URxvt*scrollBar: false
